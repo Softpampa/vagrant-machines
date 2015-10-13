@@ -1,0 +1,6 @@
+# Project vhosts
+/api.easymed.dev/
+/easymed.dev/
+
+# Default localhost folder
+/html/
