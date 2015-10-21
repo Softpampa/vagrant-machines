@@ -10,7 +10,7 @@ vagrantfile:
         network:
             private_network: 192.168.56.101
             forwarded_port:
-                vflnp_j5lwwlpp4n2d:
+                vflnp_ms0gz60nelzk:
                     host: '8662'
                     guest: '22'
         post_up_message: ''
@@ -33,7 +33,7 @@ vagrantfile:
                     - '--hiera_config /vagrant/puphpet/puppet/hiera.yaml'
                     - '--parser future'
         synced_folder:
-            vflsf_z730xy2gst7z:
+            vflsf_w7oib0l2m56l:
                 source: ./www
                 target: /var/www
                 sync_type: default
@@ -95,7 +95,7 @@ nginx:
         proxy_buffers: '4 256k'
     upstreams: {  }
     vhosts:
-        nxv_4g8h6c1ucpbq:
+        nxv_rvuq9lt5ejxm:
             server_name: awesome.dev
             server_aliases:
                 - www.awesome.dev
@@ -115,7 +115,7 @@ nginx:
             rewrite_to_https: '1'
             spdy: '1'
             locations:
-                nxvl_ru6hhravmnf7:
+                nxvl_7i30rdtrm8s4:
                     location: /
                     autoindex: 'off'
                     internal: 'false'
@@ -126,7 +126,7 @@ nginx:
                     fastcgi: ''
                     fastcgi_index: ''
                     fastcgi_split_path: ''
-                nxvl_2aatdikw2q49:
+                nxvl_kxi8iw54206k:
                     location: '~ \.php$'
                     autoindex: 'off'
                     internal: 'false'
@@ -154,7 +154,7 @@ apache:
         - proxy_fcgi
         - rewrite
     vhosts:
-        av_9ttvuarjk3fl:
+        av_ni3492d5an7i:
             servername: api.easymed.dev
             docroot: /var/www/api.easymed.dev/public
             port: '80'
@@ -169,8 +169,8 @@ apache:
             ssl_protocol: ''
             ssl_cipher: ''
             directories:
-                avd_4rgitn05kvg9:
-                    path: /var/www/easymed.dev
+                avd_wcwkbajhhdbl:
+                    path: /var/www/api.easymed.dev
                     options:
                         - Indexes
                         - FollowSymlinks
@@ -181,15 +181,15 @@ apache:
                         - 'all granted'
                     custom_fragment: ''
                     files_match:
-                        avdfm_diyf1hvmk267:
+                        avdfm_vbajkpsoyb0v:
                             path: \.php$
                             sethandler: 'proxy:fcgi://127.0.0.1:9000'
                             custom_fragment: ''
                             provider: filesmatch
                     provider: directory
-        av_ajargx2xcxsh:
+        av_hm0axf7o41l5:
             servername: easymed.dev
-            docroot: /var/www/easymed.dev
+            docroot: /var/www/easymed.dev/public
             port: '80'
             setenv:
                 - 'APP_ENV dev'
@@ -201,6 +201,25 @@ apache:
             ssl_certs_dir: ''
             ssl_protocol: ''
             ssl_cipher: ''
+            directories:
+                avd_opqkiy331zdx:
+                    path: /var/www/easymed.dev
+                    options:
+                        - Indexes
+                        - FollowSymlinks
+                        - MultiViews
+                    allow_override:
+                        - All
+                    require:
+                        - 'all granted'
+                    custom_fragment: ''
+                    files_match:
+                        avdfm_4gu9lns1to0g:
+                            path: \.php$
+                            sethandler: 'proxy:fcgi://127.0.0.1:9000'
+                            custom_fragment: ''
+                            provider: filesmatch
+                    provider: directory
 php:
     install: '1'
     settings:
@@ -222,7 +241,7 @@ php:
     fpm_ini:
         error_log: /var/log/php-fpm.log
     fpm_pools:
-        phpfp_sorxs2clyi28:
+        phpfp_7z1kytz2gip5:
             ini:
                 prefix: www
                 listen: '127.0.0.1:9000'
@@ -265,7 +284,7 @@ drush:
 ruby:
     install: '1'
     versions:
-        rv_sxm4m2rxd8kw:
+        rv_e31y92kl0xxb:
             default: '1'
             version: 2.1.2
             gems:
@@ -305,15 +324,15 @@ mysql:
         override_options: {  }
     adminer: 0
     users:
-        mysqlnu_j9otzr60d1ju:
+        mysqlnu_ey73akr9quqm:
             name: easymed
             password: '123'
     databases:
-        mysqlnd_nln42juj8mj9:
+        mysqlnd_88z882no9g3k:
             name: easymed
             sql: ''
     grants:
-        mysqlng_caef1te9w2h5:
+        mysqlng_2vax6f0vhjt0:
             user: easymed
             table: '*.*'
             privileges:
@@ -326,15 +345,15 @@ mariadb:
         override_options: {  }
     adminer: 0
     users:
-        mariadbnu_lfbyjhw9yit9:
+        mariadbnu_yoya9m44t8fq:
             name: dbuser
             password: '123'
     databases:
-        mariadbnd_gowjhn7yvqd9:
+        mariadbnd_gxfrz4fcn0zc:
             name: dbname
             sql: ''
     grants:
-        mariadbng_vrilheugwuxs:
+        mariadbng_hb0wfxfede9j:
             user: dbuser
             table: '*.*'
             privileges:
