@@ -39,3 +39,7 @@ Se seu Host for Windows, utilize a máquina **SoftpampaSMB**. Por questões de d
   - bower
   - grunt-cli
  - MySQL 5.5
+
+
+* https://github.com/ashlewis/vagrant-puphpet-samba
+* https://github.com/npm/npm/issues/7308
