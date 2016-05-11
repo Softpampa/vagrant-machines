@@ -3,7 +3,7 @@ vagrantfile:
     vm:
         box: puphpet/debian75-x64
         box_url: puphpet/debian75-x64
-        hostname: vagrant-madson
+        hostname: vagrant-internship
         memory: '512'
         cpus: '1'
         chosen_provider: virtualbox
@@ -320,7 +320,7 @@ mysql:
     install: '1'
     settings:
         version: '5.6'
-        root_password: admin
+        root_password: mysql
         override_options: {  }
     adminer: 0
     users:
